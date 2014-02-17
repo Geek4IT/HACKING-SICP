@@ -1,0 +1,17 @@
+(define (square x) (* x x))
+(define (sum-of-squares x y) (+ (square x) (square y)))
+
+(define (sum-of-the-squares-of-the-larger-two x y z)
+		(cond ((= (min x y z) x) (sum-of-squares y z))
+			  ((= (min x y z) y) (sum-of-squares x z))
+			  ((= (min x y z) z) (sum-of-squares y z))))
+
+
+(sum-of-the-squares-of-the-larger-two 1 2 3)
+(sum-of-the-squares-of-the-larger-two 5 2 1)
+(sum-of-the-squares-of-the-larger-two 2 2 3)
+
+Result:
+13
+5
+13
