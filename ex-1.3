@@ -18,3 +18,21 @@ Result:
 13
 5
 13
+
+----------------------------------------------
+----------------------------------------------
+
+
+(define (sum-of-squares x y z)
+   (+ (square (max x y)) (square (max (min x y) z))))
+
+(define (square x) (* x x))
+
+
+(sum-of-squares 1 2 4)
+(sum-of-squares 2 5 3)
+
+Result:
+20
+34
+
